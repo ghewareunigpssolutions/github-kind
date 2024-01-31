@@ -8,5 +8,6 @@ sudo mv ./kind /usr/local/bin/kind
 # Create a Kubernetes cluster
 kind create cluster --name k8s --config cluster.yaml
 
-# Set the KUBECONFIG environment variable
-export KUBECONFIG="$(kind get kubeconfig-path --name="kind")"
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+alias k=kubectl
