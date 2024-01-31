@@ -8,7 +8,6 @@
             "moby": true
         }
     },
-    "kind":"docker",
 
     "customizations": {
         // Configure properties specific to VS Code.
@@ -31,7 +30,7 @@
             ]
         }
     },
-    "forwardPorts": [6443, 8080, 2375],
-    "postCreateCommand": "./install-kind.sh",
+    "forwardPorts": [32444, 8080, 2375],
+    "postCreateCommand": "./install-kind.sh &",
     "remoteUser": "vscode" 
 }
