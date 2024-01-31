@@ -30,7 +30,7 @@
             ]
         }
     },
-    "forwardPorts": [32444, 8080, 2375],
+    "forwardPorts": [32400,32444, 8080],
     "postCreateCommand": "./install-kind.sh &",
     "remoteUser": "vscode" 
 }
