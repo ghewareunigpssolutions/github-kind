@@ -15,6 +15,10 @@ nodes:
       kubeletExtraArgs:
         node-labels: "ingress-ready=true"
         authorization-mode: "AlwaysAllow"
+  - |
+    apiServer:
+      extraArgs:
+        enable-admission-plugins: "ServiceAccount"        
   extraPortMappings:
   - containerPort: 32400
     hostPort: 32400
